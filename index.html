@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Journal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar bg-danger">
+        <div style="margin-left: 20px;">
+            <a href="#" class="navbar-brand" style="color: #fff;">Trading Journal</a>
+        </div>
+    </nav>
+
+    <div class="mx-auto mt-3" style="max-width: 1600px;">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-1">
+                            <input type="text" class="form-control" id="date" placeholder="Date">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <input type="text" class="form-control" id="pair" placeholder="Pair">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="timeframe" placeholder="Timeframe">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="shortLong" placeholder="Short / Long">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="entry" placeholder="Entry Point">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="tp" placeholder="Take Profit">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="sl" placeholder="Stoploss">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="size" placeholder="Size">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="wl" placeholder="Win / Lose">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="link" placeholder="Tradingview Link">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" id="reasons" placeholder="Reasons">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" id="results" placeholder="Results">
+                        </div>
+                        <button id="addBtn" type="submit" class="btn btn-primary btn-sm mr-1"><i class="fas fa-plus p-1"></i>Add</button>
+                        <button id="updateBtn" type="submit" class="btn btn-warning btn-sm mr-1"><i class="far fa-edit p-1"></i>Save Changes</button>
+                        <button id="deleteBtn" type="submit" class="btn btn-danger btn-sm mr-1"><i class="fas fa-times p-1"></i>Delete</button>
+                        <button id="cancelBtn" type="submit" class="btn btn-secondary btn-sm mr-1"><i class="fas fa-arrow-circle-left p-1"></i>Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-3" id="elementCard">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Pair</th>
+                        <th>Timeframe</th>
+                        <th>Short / Long</th>
+                        <th>Entry</th>
+                        <th>TP</th>
+                        <th>SL</th>
+                        <th>Size</th>
+                        <th>R</th>
+                        <th>Profit</th>
+                        <th>W/L</th>
+                        <th>Link</th>
+                        <th>Reasons</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+                <tbody id="item-list">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-footer text-right">
+                <p>Total R <strong><span id="totalR"></span></strong></p>
+                <p>Total Profit ($) <strong><span id="totalProfit"></span></strong></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
